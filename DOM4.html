@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mouse Events</title>
+        <style>
+         * 
+         {
+             border: 3px solid red;
+             margin: 5px;
+             }
+             </style>
+        <script>
+            function Work1()
+            {
+                document.getElementById('d1').innerHTML='Mouse was entered'
+            }
+            function work2()
+            {
+                document.getElementById('d1').innerHTML='Mouse was leaved'
+            }
+            function work3()
+            {
+                document.getElementById('d1').innerHTML='Mouse was clicked once'
+            }
+            function work4()
+            {
+                document.bgColor='green'
+            }
+            function work5()
+            {
+                var name=document.getElementById('t1').value
+                if(name=="")
+                {
+                    // alert("Please enter your name")
+                    document.getElementById('d2').style.color="green"
+                    document.getElementById('d2').innerHTML=" * Please Enter ur name"
+                }
+                else{
+                    alert("Welcome Mr:" +name)
+                } 
+            }
+        </script>
+    </head>
+    <body>
+        <div onmouseenter="Work1()" onmouseleave="work2()" onclick="work3()" id='d1'>
+            Welcome to dxc
+        </div>
+        <button ondblclick="work4()">green</button> <br>
+        <div>
+            <label> Enter your Name :</label>
+            <input type="text" id='t1'> <br>
+            <button onclick="work5()">checkData</button>
+        </div>
+        <div id="d2">
+
+        </div>
+    </body>    
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function fun1()
+            {
+                var username=document.getElementById('t1').value
+                var password=document.getElementById('t2').value
+                if(username=="")
+                {
+                    alert('Please enter user name');
+                    return false
+                }
+                if(password=="")
+                {
+                    alert('Please enter password');
+                    return false
+                }
+                if(userid=='chanti' && password=='admin')
+                {
+                    alert('valid credentials')
+                }
+                else
+                {
+                    alert("Data is accepted");
+                    return true
+                }
+            }
+            function fun2()
+            {
+                var res=confirm('Are sure to remove?')
+                if(res==true)
+                {
+                    return true
+                }
+                else
+                {
+                    return false
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="http://ashokit.in/" onsubmit="return fun1()" onreset="return fun2()">
+            <table align="center" cellspacing="5px"cellpadding="5px">
+                <caption><b>Log-in Form</b></caption>
+                <tr>
+                    <td><label for="t1">UserId</label></td>
+                    <td>
+                        <input type="text" id="t1" name="n1">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="t2">Password</label></td>
+                    <td>
+                        <input type="password" id="t2">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="SignIn">
+                    </td>
+                    <td>
+                        <input type="reset" value="Clear">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

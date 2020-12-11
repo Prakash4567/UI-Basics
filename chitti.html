@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    </head>
+    <body>
+        <style>
+            body
+            {
+                background-color: #EED426;
+                text-align: center;
+            }
+            #CN
+            {
+                margin-left: 5%;
+            }
+            #CE
+            {
+                margin-left: 5%;
+            }
+            #MN
+            {
+                margin-left: 5%;
+                text-align: center;
+            }
+            .b
+            {
+                margin-left: 20%;
+            }
+            .ACTB
+            {
+                margin-left: 15%;
+            }
+            #rentalcost
+            {
+                margin-left: 25%;
+                border: 1;
+                border-style: solid;
+            }
+            table, td, th
+            {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            h1
+            {
+                color: #006666;
+                text-align: center;
+                font-family: Verdana;
+            }
+        </style>
+        <script>
+            function result()
+            {
+                var ctype=document.getElementById("connectiontype").value;
+                var sn=document.getElementsByName("scheme");
+                var d=parseInt(document.getElementById("duration").value);
+                var c=0, m=0,r=0;
+                if(ctype=="Pre")
+                {m=75;}
+                if(ctype=="Post")
+                {m=150;}
+                for(i=0;i<sn.length;i++)
+                {if(sn[i].checked)
+                {
+                    if(sn[i].value=="Local")
+                    {c=200;}
+                    if(sn[i].value=="STD")
+                    {c=350;}
+                    if(sn[i].value=="FullTalkTime")
+                    {c=500;}
+                
+                }    
+                }
+                r=(c*d)+m;
+                document.getElementById("result").innerHTML="The Total Monthly Rental Cost is Rs. "+r;
+            }
+        </script>
+        <h1 class="ACTB">ACTB Connection Portal</h1>
+        <label for="CN">Customer Name</label>
+        <input id="CN" type="text" placeholder="Enter the customer name" name="custname" required><br>
+        <label for="CE">Customer Email</label>
+        <input id="CE" type="email" placeholder="abc@gmail.com" name="email" required><br>
+        <label for="MN">MobileNumber</label>
+        <input id="MN" type="text" placeholder="Enter the Mobile Number" name="mobile" pattern="[789][0-9]{9}" required><br>
+        <label for="connectiontype">Type of Broadband</label>
+        <select name="conntype" id="connectiontype" required>
+            <option value="Pre" name="conntype">Pre</option>
+            <option value="Post" name="conntype">Post</option>
+        </select><br>
+        Scheme Name
+        <input value="Local" id="scheme1" type="radio" name="scheme">Local
+        <input value="STD" id="scheme2" type="radio" name="scheme">STD
+        <input value="FullTalkTime" id="scheme3" type="radio" name="scheme">FullTalkTime<br>
+        <label for="duration">Connection Duration</label>
+        <input id="duration" type="number" name="duration" min="1" max="12" required><br>
+        <input type="button" name="submit" value="calculate Bill Amount" onclick="result()">
+        <input type="reset" placeholder="Reset" name="clear" value="Reset"><br>
+        <div name="result" id="result"></div>
+        <table id="rentalcost" style="width:50%">
+            <tr>
+                <th>Connection Type</th>
+                <th>Call Limit</th>
+                <th>Monthly Rental</th>
+            </tr>
+            <tr>
+                <td>Pre</td>
+                <td>500</td>
+                <td>75</td>
+            </tr>
+            <tr>
+                <td>Post</td>
+                <td>Unlimited</td>
+                <td>150</td>
+            </tr>
+        </table>
+    </body>
+</html>

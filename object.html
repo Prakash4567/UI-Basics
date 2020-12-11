@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Introduction to objects</title>
+        <script type="text/javascript">
+         
+         var Car = {
+             car_name : "Innova",
+             car_model : "Model_3",
+             price : 145000,
+
+             teslamodel : function()
+             {
+                 document.write("<h2> This is new model</h2>")
+             }
+         }
+         // 100 lines of code you realized that we have to add another feature to the exsisting obj.
+         Car.fueltype = "Electrical";
+         /* We can use methods also */
+        // Car.newFn = function()
+        // {
+        //     document.write("<h2>Added function</h2>");
+        // }
+        document.write("<h2>"+Car.fueltype+"</h2>");
+        
+        /* If you want to del something after some pieces of code from the exsisting keyword */
+        /* We can also change data type from Antthing to anything */
+        delete Car.price;
+        document.write("<h2>"+Car.price+"</h2>");
+        // Car.teslamodel();
+
+        // function Cars(car_brand, car_model, price)
+        // {
+        //     this.car_brand = car_brand;
+        //     this.car_model = car_model;
+        //     this.price = price;
+        //     this.teslamodel = function()
+        //     {
+        //         document.write("<h2> This is new model</h2>");
+        //     }
+        // }
+        
+        // var c1 = new Cars("Tesla","Model 3", 350000);
+        // var c2 = new Cars("Tesla", "Model P", 445000);
+        // c1.teslamodel();
+        // document.write("<h2>This car has a auto pilot</h2>");
+        </script>
+    </head>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function fun1()
+            {
+                alert('onload event is working')
+            }
+            function fun2()
+            {
+                alert('onunload event is working')
+            }
+            function fun3()
+            {
+                alert('oncopy event is working')
+            }
+            function fun4()
+            {
+                alert('onselect event is working')
+            }
+            function fun5()
+            {
+                //get
+                //set
+                document.getElementById('id2').src=document.getElementById('id1').value
+            }
+        </script>
+    </head>
+    <body onload="fun1()" onunload="fun2()">
+      Password:  <input type="password" value="123456" id='t1' onselect="fun4()">
+      <br>
+      Email:  <input type="email" value="123456@gmail.com" id='t1' oncopy='fun3()'>
+      <br><br>
+      Select Image :
+      <select id='id1' onchange="fun5()">
+          <option value="kid1.jpg">Kid1 Pic</option>
+          <option value="kid2.jpg">Kid2 Pic</option>
+          <option value="kid3.jpg">Kid3 Pic</option>
+      </select>
+      <br><br>
+      <img id='id2' src="kid1.jpg" height="200px" width="200px">
+    </body>
+</html>

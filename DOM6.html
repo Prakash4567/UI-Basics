@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mouse Events</title>
+        <style>
+         * 
+         {
+             border: 3px solid greenyellow;
+             margin: 5px;
+             }
+             </style>
+        <script>
+           function fun1()
+           {
+              var email= document.getElementById('t1').value=email.toUpperCase()
+           }
+           function fun2()
+           {
+              var UserName= document.getElementById('t2').value=name.toUpperCase()
+           }
+           function fun3()
+           {
+                var otp=document.getElementById('otp').value
+                if(otp=="")
+                {
+                    // alert("Please enter your name")
+                    document.getElementById('s1').style.color="red"
+                    document.getElementById('s1').innerHTML=" * Please Enter ur OTP"
+                }
+                else{
+                    alert("Your OTP is" +otp)
+                } 
+            }
+        </script>
+    </head>
+    <body>
+        EmailId: <input type="email" id='t1' value=dsp@gmail.com onblur="fun1()"> <br><br><br>
+        UserName: <input type="text" id='t2' value=Prakash onblur="fun2()"> <br><br><br>
+        <div>
+            <label>Enter ur OTP:</label>
+            <input type="number" id="otp" onblur="fun3()">
+            <span id='s1'></span>
+        </div>
+    </body>    
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function fun1()
+            {
+                var person={"age":25,"name":"Ajay","height":5.6}
+                var str=''
+                str=str+person.age+' , '+person.name+' , '+person.height
+                document.getElementById('id1').innerHTML=str
+                console.log(person)
+            }
+            function fun2()
+            {
+         // Real time fetch the data from Rest API Or Database with help of Ajax with JavaScript code
+                var persons=[
+                    {"age":25,"name":"Ajay","height":5.6,"pic":"kid1.jpg"},
+                    {"age":24,"name":"Sai","height":4.6,"pic":"kid2.jpg"},
+                    {"age":23,"name":"Satya","height":5.8,"pic":"kid3.jpg"},
+                ];
+                var str=''
+                str=str+"<tr><th>AGE</th><th>NAME</th><th>HEIGHT</th><th>PIC</th></tr>"
+                for(var i=0;i<persons.length;i++)
+                {
+                    str=str+"<tr>"
+                    str=str+"<td>"+persons[i].age+"</td>"
+                    str=str+"<td>"+persons[i].name+"</td>"
+                    str=str+"<td>"+persons[i].height+"</td>"
+                    str=str+"<td><img src="+persons[i].pic+" height='100px'; width='100px'></td>"
+                    str=str+"</tr>"
+                }
+               
+            }
+        </script>
+    </head>
+    <body>
+        <p id='id1'></p>
+        <table id='id2' align="center" border="2px"></table>
+        <button onclick="fun1()">Get 1 person details</button>
+        <button onclick="fun2()">Get 5 person details</button>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            //5. Callback functions 
+            // It's advanced topics are (async & await => these become old now advanced are =>Promises)
+            function wish1()
+            {
+                 alert('Hi')
+            }
+            function wish2()
+            {
+                alert("bye")
+            }
+            function addition(one,a,b,two) // a,b are formal parameters
+            {
+                one()
+                alert(a+b)
+                two()
+            }
+            var x=10,y=30
+            addition(wish1,x,y,wish2)   // x,y are actual parameters
+        </script>
+    </body>
+</html>

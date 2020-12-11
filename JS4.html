@@ -1,0 +1,34 @@
+<!DOCTYPE html>>
+<html>
+    <head>
+        <script > </script>
+    </head>
+    <body>
+        <script>
+           // 1. Function Declaration/Prototype
+           function sum(a,b)
+           {
+               return (a+b);
+           }
+           alert(sum(10,20))
+           // 2. Function Expression
+           var add=function(a,b)
+           {
+               return(a+b);
+           }
+           alert(sum(100,200))
+           // 3. Arrow Functions
+           var add1=(a,b)=>
+           {
+               return(a+b);
+           }
+           alert(add1(1,9))
+           // 3. Arrow Functions with single line of body i.e., returned value
+           var add2=(a,b)=>a+b
+           alert(add1(10,9))
+           // 3. Arrow Functions with single argument
+           var add3=a=>a+100
+           alert(add3(8))
+        </script>
+    </body>
+</html>
